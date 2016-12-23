@@ -38,8 +38,10 @@ In "Original" is where the node we want to clone.
 In "Destination" is where the node is to be cloned, the node can be from same or the differents Documents.
 
 "Safe" is a variable that is used within the function. It serves to not clone a self while doing the cloning.
+
+The function return a "XMLElement*" with the finally Node.
 */
 
-void DeepClone(tinyxml2::XMLNode* Original, tinyxml2::XMLNode* Destination, bool Safe = true);
+tinyxml2::XMLElement* DeepClone(tinyxml2::XMLNode* Original, tinyxml2::XMLNode* Destination, bool Safe = true);
 
 #endif //DEEPCLONE

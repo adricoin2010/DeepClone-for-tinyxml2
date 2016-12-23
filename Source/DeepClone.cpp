@@ -33,7 +33,7 @@ SOFTWARE.
 
 using namespace tinyxml2;
 
-void DeepClone(tinyxml2::XMLNode* Original, tinyxml2::XMLNode* Destination, bool Safe) {
+tinyxml2::XMLElement* DeepClone(tinyxml2::XMLNode* Original, tinyxml2::XMLNode* Destination, bool Safe) {
 
 	if (Safe || Original -> ToElement() -> BoolAttribute("DeepClone") == false) {
 
@@ -84,6 +84,14 @@ void DeepClone(tinyxml2::XMLNode* Original, tinyxml2::XMLNode* Destination, bool
 			TempElement -> DeleteAttribute("DeepClone");
 
 		}
+
+		return TempElement;
+
+	}
+	else
+	{
+
+		return NULL;
 
 	}
 
