@@ -1,0 +1,11 @@
+*.o
+*.d
+*.so
+*.ini
+*.mmake
+*.sublime-project
+*.sublime-workspace
+
+/Example/new.xml
+
+/Build/
